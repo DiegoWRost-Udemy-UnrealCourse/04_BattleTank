@@ -4,6 +4,7 @@
 
 #include "Tank.h"
 #include "CoreMinimal.h"
+#include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h" // Must be the last included
 
@@ -29,13 +30,17 @@ private:
 	void AimTowardsCrosshair();
 
 	// Return an OUT parameter, true if hit landscape
-	bool GetSightRayLocation(FVector& OutHitLocation) const;
+	bool GetSightRayLocation(FVector& HitLocation) const;
 
 	UPROPERTY(EditAnywhere)
 	float CrosshairXLocation = 0.5;
 	
 	UPROPERTY(EditAnywhere)
 	float CrosshairYLocation = 0.3333;
+
+	UPROPERTY(EditAnywhere)
+	float LineTraceRange = 1000000;
 	
 	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
+	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
 };
