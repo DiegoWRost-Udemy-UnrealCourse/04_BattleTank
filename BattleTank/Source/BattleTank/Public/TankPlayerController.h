@@ -30,7 +30,7 @@ private:
 	void AimTowardsCrosshair();
 
 	// Return an OUT parameter, true if hit landscape
-	bool GetSightRayLocation(FVector& HitLocation) const;
+	bool GetSightRayHitLocation(FVector& HitLocation) const;
 
 	UPROPERTY(EditAnywhere)
 	float CrosshairXLocation = 0.5;
