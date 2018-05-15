@@ -32,7 +32,11 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 		StartLocation,
 		HitLocation,
 		LaunchSpeed,
-		ESuggestProjVelocityTraceOption::DoNotTrace
+		false,
+		0,
+		0,
+		ESuggestProjVelocityTraceOption::DoNotTrace // parameter must be present to present bug (still happening in 4.19 even with this line)
+		// TODO Report bug
 	);
 	if (bHaveAimSolution)
 	{

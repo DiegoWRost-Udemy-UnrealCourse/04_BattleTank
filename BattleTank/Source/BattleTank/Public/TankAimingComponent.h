@@ -7,7 +7,6 @@
 #include "Kismet/GameplayStatics.h"
 #include "TankAimingComponent.generated.h"
 
-
 // Forward Declaration
 class UTankBarrel;
 
