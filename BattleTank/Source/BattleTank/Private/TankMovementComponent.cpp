@@ -1,4 +1,4 @@
-// // Copyright Treva Games Ltd.
+// Copyright Treva Games Ltd.
 
 #include "TankMovementComponent.h"
 #include "TankTrack.h"
